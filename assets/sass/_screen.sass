@@ -1,0 +1,353 @@
+header 
+	section.top-header
+		background-color: $escuro
+		.info-contact
+			padding: 10px 0
+			p 
+				color: white
+				font-size: 12px
+				float: left
+				margin: 0px 25px 0px 0 
+				font-family: $font-default
+				i 
+					padding-right: 5px 
+		.box-contatc
+			position: relative
+			display: block
+			.box-form
+				display: none
+				position: absolute
+				top: 25px
+				right: 0
+				width: 300px
+				background-color: $escuro
+				padding: 20px
+				border-radius: 0px 0px 5px 5px
+				box-shadow: -1px 3px 4px rgba(51, 49, 50, 0.55)
+				z-index: 10
+		.access-panel, .contact-open
+			color: white
+			text-decoration: none
+			margin: 0px 10px
+			&:hover
+				color: $blue
+	section.menu
+		padding-top: 30px
+		nav
+			@extend .clearfix
+			margin-top: 20px
+			ul
+				@extend .clearfix
+				li
+					float: left
+					&:first-child
+						&:before
+							width: 0px
+					&:before
+						background: #e1e1e1
+						content: ""
+						height: 37px
+						margin-right: 15px
+						position: absolute
+						width: 1px
+						top: 10px
+					a
+						color: $escuro
+						font-family: $font-default
+						padding: 6px 15px
+						text-decoration: none
+						border-bottom: solid 3px transparent
+						height: 30px
+						&:hover
+							// +transition-property(border-bottom)
+							+transition-property(all)
+							+transition-duration(0.5s)
+							+transition-timing-function(linear)
+							border-bottom: solid 3px $dark-purple
+							height: 28px
+.home-servicos
+	color: white
+	text-align: center
+	display: block
+	position: relative
+	.col-lg-12
+		position: absolute
+		z-index: 2
+		text-align: center
+		display: block
+	.box
+		text-decoration: none
+		width: 250px
+		display: inline-flex
+		margin: 5px
+		figure
+			background-color: rgb(13, 23, 31)
+			img 
+				opacity: 0.7
+			span
+				text-align: center
+				color: white
+				text-decoration: none
+				display: block
+				padding: 10px
+				text-transform: uppercase
+		&:hover
+			img
+				opacity: 1
+				+transition-property(opacity)
+				+transition-duration(0.7s)
+				+transition-timing-function(linear)
+			span
+				font-weight: 500
+				text-decoration: none
+.banner
+	margin-top: 50px
+	min-height: 330px
+	width: 100%
+	background-color: $blue
+	&:before
+		background-image: url("../img/banner/img1.jpg")
+		content: ""
+		position: absolute
+		display: block
+		height: 330px
+		width: 100%
+		background-position: left
+		opacity: 0.7
+.resume
+	margin-top: 60px
+	padding: 40px 0px
+	.desc	
+		h2
+			color: $dark-purple
+			font-family: $font-second
+			margin: 0px
+			strong
+				font-weight: 900
+	.icon-cms
+		min-height: 115px
+		.grid
+			padding: 20px 0
+		.logo-cms
+			width: 60px
+			height: 60px	
+			opacity: 0.7
+			&:hover
+				+transition-property(width, height)
+				+transition-duration(0.4s)
+				+transition-timing-function(linear)
+				width: 65px
+				height: 65px
+				opacity: 1
+	&:last-child
+		margin-bottom: 40px							
+section.jobs
+	.portifolio-home
+		@extend .clearfix
+		.galerias
+			display: none 
+			opacity: 0
+			+transition-property(opacity)
+			+transition-duration(2s)
+			+transition-timing-function(linear)
+		.web
+			&.ativo
+				width: 90%
+				+transition-property(width)
+				+transition-duration(1s)
+				+transition-timing-function(easein)
+				.galerias
+					display: block 
+					opacity: 1
+					+transition-property(opacity)
+					+transition-duration(2s)
+					+transition-timing-function(linear)
+			&.mini
+				width: 10%
+				+transition-property(width)
+				+transition-duration(1s)
+				+transition-timing-function(easein)				
+		.graphic
+			&.ativo
+				width: 90%
+				+transition-property(width)
+				+transition-duration(1s)
+				+transition-timing-function(easein)
+				.galerias
+					display: block 
+					opacity: 1
+					+transition-property(opacity)
+					+transition-duration(1s)
+					+transition-timing-function(easein)
+			&.mini
+				width: 10%
+				+transition-property(width)
+				+transition-duration(1s)
+				+transition-timing-function(easein)
+	.web, .graphic
+		padding: 0
+		text-align: center
+		min-height: 520px
+		position: relative
+		display: block
+		&.ativo
+			figure
+				width: 20%
+				margin: 150px auto 0
+			.galerias
+				padding: 40px				
+				img
+					margin-top: 20px
+		&.mini
+			figure
+				width: 70%
+				margin: 150px auto 0
+				h3
+					color: white
+		figure
+			margin-top: 20%
+			width: 100%
+			img
+				margin: 0 auto
+			h3
+				color: white
+		.grid-img
+			// display: none
+			// width: 1px
+			height: 100%
+			// transition: transform 0.6s
+			+transition-property(width)
+			+transition-duration(2s)
+			+transition-timing-function(linear)
+			// img
+			// 	padding: 3px
+	.web
+		background-color: $blue
+	.graphic
+		background-color: $purple
+section.help
+	padding: 50px
+	background-image: url("../img/banner/advantages_bg.jpg")
+	background-position: center
+	background-size: 1600px
+	background-attachment: fixed
+	background-repeat: no-repeat
+	.carousel-fade .item
+		+transition-property(width)
+		+transition-duration(1s)
+		+transition-timing-function(easein)
+		h3
+			color: white
+			font-family: $font-default
+			position: relative
+			&:before
+				content: ""
+				width: 40px
+				height: 1px
+				position: absolute
+				color: red
+				display: block
+				background-color: white
+				bottom: -10px
+		p
+			margin-top: 25px
+			font-size: 18px
+			font-weight: 100
+			color: white
+			font-family: $font-default
+// icons-host
+.icon-host
+	img 
+		padding: 20px
+/////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// ELEMENTOS ////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+.lend-title
+	margin-top: 40px
+	padding: 20px
+	background-color: $dark-blue
+	text-align: center
+	color: white
+	position: relative
+	
+.space-top30
+	margin-top: 30px
+// BOTAO
+.btn-default
+	background-color: $dark-purple
+	color: white
+	font-size: 15px
+	padding: 10px 40px
+	margin-top: 20px
+
+
+
+/////////////////////////
+// TIPOGRAFIA
+////////////////////////
+h1
+h2
+	font-family: $font-default
+h2.chamada
+	padding: 3%
+	font-size: 25px
+	font-family: $font-second
+	font-weight: 300
+h4
+	font-size: 25px
+	font-family: $font-second
+	font-weight: 300
+.aline
+	position: relative
+	&:before
+		content: ""
+		width: 40px
+		height: 1px
+		position: absolute
+		color: red
+		display: block
+		background-color: white
+		bottom: -10px
+figcaption
+	font-family: $font-default
+	color: $purple
+	font-size: 16px
+	padding: 5px 0
+	text-align: center
+
+///////////////////////
+// Colors
+///////////////////////
+.white
+	color: white
+
+//////////////////////
+/// footer
+/////////////////////
+footer
+	background-color: #333132
+	padding: 30px 0 10px
+	border-top: 3px solid black
+	color: white
+	h4 
+		color: white
+		position: relative
+		&:before
+			content: ""
+			width: 40px
+			height: 1px
+			position: absolute
+			color: red
+			display: block
+			background-color: white
+			bottom: -10px
+	ul 
+		margin-top: 30px
+		li
+			padding: 5px 0
+			font-family: $font-second
+			.glyphicon
+				margin-right: 10px
+	.copyright
+		font-size: 12px
+		font-family: $font-second
